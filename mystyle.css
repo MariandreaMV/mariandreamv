@@ -4,8 +4,8 @@
 }
 
 header {
+  margin: 0;
   background-color: black;
-  margin-bottom: 0;
 }
 
 body{
@@ -202,6 +202,24 @@ header{
   float:left;
 }
 
+/* this is a combinator for all the images tags after a div */
+div ~ img{
+  position: fixed;
+  background-color: white;
+  bottom: 4%;
+  right: 1em;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid white;
+  z-index: 1000;
+}
+
+div~img:hover{
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0, .8);
+}
+
+
 /*   margin: 0 auto; */
 
 /*  when the screen is bigger */
@@ -225,8 +243,13 @@ header{
 
 .table-image{
   margin-bottom: 20px;
-  width: 80%;
-  height: 80%;
+  width: 150;
+  height: 150;
+}
+
+div ~ img{
+  width: 80px;
+  height: 80px;
 }
 
 }

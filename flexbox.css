@@ -28,16 +28,19 @@ header{
   width: 100%;
 }
 
+footer{
+  height: 80px;
+  text-align: center;
+  color: white;
+  background-color: gray;
+  padding: 30px;
+}
+
 
 a:hover{
   color: black;
 }
 
-footer{
-  background-color: black;
-  margin: 0;
-  padding: 0;
-}
 
 li:first-child{
   margin-left: 0;
@@ -192,9 +195,27 @@ li:last-child{
   box-shadow: 0px 0px 10px 5px rgba(0,0,0, .8);
 }
 
+/* this is a combinator for all the images tags after a div */
+div ~ img{
+  position: fixed;
+  background-color: white;
+  bottom: 4%;
+  right: 1em;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+div~img:hover{
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0, .8);
+}
+
+
 
 /*  medium screens  or large like  tablets  or regular pcs*/
 @media (min-width : 702px) and (max-width:1600px){
+
   .container{
     width: 80%;
   }
@@ -226,5 +247,11 @@ li:last-child{
   .table{
     flex-direction: row;
   }
+  div ~ img{
+
+    width: 80px;
+    height: 80px;
+  }
+
 
 }
