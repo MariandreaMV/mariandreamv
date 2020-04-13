@@ -202,7 +202,7 @@ header{
   float:left;
 }
 
-
+/* this is a combinator for all the images tags after a div */
 div ~ img{
   position: fixed;
   background-color: white;
